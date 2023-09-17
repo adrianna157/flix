@@ -1,0 +1,15 @@
+<h1>Review for <%= link_to @movie.title, @movie %></h1>
+
+<%= render "shared/stars", percent: @review.stars_as_percent %>
+<p>
+  <%= @review.name %>
+  <span class="date">
+      <%= time_ago_in_words(@review.created_at) %> ago
+    </span>
+</p>
+<p>Comment: <%= @review.comment %></p>
+<section class="admin">
+  <%= link_to "Edit", edit_movie_review_path(@movie, @review), class: "button" %>
+  <%= link_to "Delete", movie_review_path(@movie, @review), class: "button",
+              data: { turbo_method: :delete, turbo_confirm: "Are You Sure?" } %>
+</section>
