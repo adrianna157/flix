@@ -8,3 +8,8 @@
     <%= @user.created_at.strftime("%B %Y") %>
   </p>
 </section>
+<section class="admin">
+  <%= link_to "Edit Account", edit_user_path(@user), class: "button" %>
+  <%= link_to "Delete Account", @user, class: "button",
+                              data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+</section>
