@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41c2de79-f956-4e47-a109-04e82258fd04" name="Changes" comment="Add gravitase usage to add profile pictures">
-      <change afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
+    <list default="true" id="41c2de79-f956-4e47-a109-04e82258fd04" name="Changes" comment="Add edit and delete functionality to user accounts">
+      <change afterPath="$PROJECT_DIR$/db/migrate/20230920183244_add_username_to_users.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +20,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -149,7 +154,8 @@
       <workItem from="1694533445710" duration="1445000" />
       <workItem from="1694625232024" duration="598000" />
       <workItem from="1694636206677" duration="10062000" />
-      <workItem from="1694731000583" duration="51416000" />
+      <workItem from="1694731000583" duration="55436000" />
+      <workItem from="1695310301050" duration="35000" />
     </task>
     <task id="LOCAL-00001" summary="Update stars business logic and view">
       <option name="closed" value="true" />
@@ -167,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695227530207</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add edit and delete functionality to user accounts">
+      <option name="closed" value="true" />
+      <created>1695234665233</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695234665233</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +202,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Update stars business logic and view" />
     <MESSAGE value="Add gravitase usage to add profile pictures" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add gravitase usage to add profile pictures" />
+    <MESSAGE value="Add edit and delete functionality to user accounts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add edit and delete functionality to user accounts" />
   </component>
 </project>

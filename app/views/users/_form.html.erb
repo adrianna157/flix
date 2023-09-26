@@ -1,6 +1,9 @@
 <%= form_with(model: user) do |f| %>
   <%= render "shared/errors", object: user %>
 
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: "Alphanumeric characters only!" %>
+
   <%= f.label :name %>
   <%= f.text_field :name %>
 
