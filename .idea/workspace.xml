@@ -4,19 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41c2de79-f956-4e47-a109-04e82258fd04" name="Changes" comment="Add edit and delete functionality to user accounts">
-      <change afterPath="$PROJECT_DIR$/db/migrate/20230920183244_add_username_to_users.rb" afterDir="false" />
+    <list default="true" id="41c2de79-f956-4e47-a109-04e82258fd04" name="Changes" comment="Add user signup and creation">
+      <change afterPath="$PROJECT_DIR$/app/controllers/concerns/test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/sessions_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flix.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flix.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Ruby File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,6 +62,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
     &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -89,6 +100,7 @@
     </configuration>
     <configuration name="spec: flix" type="RakeRunConfigurationType" factoryName="Rake">
       <module name="flix" />
+      <predefined_log_file enabled="true" id="RUBY_RAKE" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
@@ -112,6 +124,7 @@
     </configuration>
     <configuration name="test: flix" type="RakeRunConfigurationType" factoryName="Rake">
       <module name="flix" />
+      <predefined_log_file enabled="true" id="RUBY_RAKE" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
@@ -156,6 +169,13 @@
       <workItem from="1694636206677" duration="10062000" />
       <workItem from="1694731000583" duration="55436000" />
       <workItem from="1695310301050" duration="35000" />
+      <workItem from="1695690981515" duration="79000" />
+      <workItem from="1696263697295" duration="17243000" />
+      <workItem from="1697575906310" duration="3446000" />
+      <workItem from="1698240502579" duration="31000" />
+      <workItem from="1698240573101" duration="649000" />
+      <workItem from="1699636612093" duration="8543000" />
+      <workItem from="1699712027683" duration="595000" />
     </task>
     <task id="LOCAL-00001" summary="Update stars business logic and view">
       <option name="closed" value="true" />
@@ -181,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695234665233</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add user signup and creation">
+      <option name="closed" value="true" />
+      <created>1695691040687</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695691040687</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +231,7 @@
     <MESSAGE value="Update stars business logic and view" />
     <MESSAGE value="Add gravitase usage to add profile pictures" />
     <MESSAGE value="Add edit and delete functionality to user accounts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add edit and delete functionality to user accounts" />
+    <MESSAGE value="Add user signup and creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add user signup and creation" />
   </component>
 </project>

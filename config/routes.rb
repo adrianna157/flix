@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   resources :movies do
     resources :reviews
   end
-  get "signup" => "users#new"
 
+  resource :session, only: [:new, :create, :destroy]
+  get "signup" => "users#new"
+  get "signin" => "sessions#new"
 end

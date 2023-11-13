@@ -1,0 +1,89 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 2.7.5
+  TargetRailsVersion: 5.2
+  Exclude:
+    - 'db/schema.rb'
+  DisabledByDefault: true
+  NewCops: disable
+
+Rails/Blank:
+  Enabled: true
+  NilOrEmpty: true
+  NotPresent: true
+  UnlessPresent: true
+
+Rails/Date:
+  Enabled: true
+  EnforcedStyle: strict
+
+Rails/EnvironmentComparison:
+  Enabled: true
+
+Rails/FilePath:
+  Enabled: true
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: true
+
+Rails/InverseOf:
+  Enabled: true
+
+Rails/Present:
+  Enabled: true
+
+Rails/SafeNavigation:
+  Enabled: true
+  ConvertTry: true
+
+Rails/SaveBang:
+  Enabled: true
+
+Rails/SkipsModelValidations:
+  Enabled: true
+
+Rails/TimeZone:
+  Enabled: true
+
+Rails/UnknownEnv:
+  Enabled: true
+  Environments:
+    - development
+    - test
+    - cypress
+    - production
+    - staging
+
+Security:
+  Enabled: true
+
+Performance:
+  Enabled: true
+
+Layout:
+  Enabled: true
+Layout/IndentationStyle:
+  EnforcedStyle: tabs
+Layout/IndentationWidth:
+  Width: 1
+
+#Rails:
+#  Enabled: true
+#
+#Rails/Validation:
+#  Enabled: false
+#
+#Style:
+#  Enabled: false
+#
+#Style/Documentation:
+#  Enabled: false
+#
+#Style/HashSyntax:
+#  Enabled: false
+#
+#Metrics:
+#  Enabled: false
