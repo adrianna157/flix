@@ -10,11 +10,13 @@
   </p>
 </section>
 <section class="admin">
-  <% if current_user?(@user) %>
     <div class="actions">
-      <%= link_to "Edit Account", edit_user_path(@user), class: "button" %>
-      <%= link_to "Delete Account", @user, class: "button",
-                  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+      <% if current_user?(@user) %>
+        <%= link_to "Edit Account", edit_user_path(@user), class: "button" %>
+      <%end %>
+      <% if current_user_admin? %>
+        <%= link_to "Delete Account", @user, class: "button",
+                    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+      <% end %>
     </div>
-  <% end %>
 </section>
