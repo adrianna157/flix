@@ -2,8 +2,11 @@
   <div class="image">
     <%= image_tag @movie.image_file_name %>
     <% if current_user %>
-      <div class="favorites">
-        <%= button_to "⭐️ Favorite", movie_favorites_path(@movie) %>
+      <div class="faves">
+       <%= fave_or_un_fave_button(@movie, @fave) %>
+        <div class="count">
+          <%= @fans.size %>
+        </div>
       </div>
     <% end %>
   </div>

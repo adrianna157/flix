@@ -1,6 +1,7 @@
 # require 'flipper'
 
 Rails.application.routes.draw do
+  resources :genres
   resources :users
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :movies do
     resources :reviews
-    resources :favorites
+    resources :favorites, only: [:create, :destroy]
   end
 
   resource :session, only: [:new, :create, :destroy]
