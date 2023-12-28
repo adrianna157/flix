@@ -1,0 +1,34 @@
+<%= form_with(model: @genre) do |f| %>
+
+	<%= render 'shared/errors', object: @genre %>
+
+	<% if @genres.present? %>
+		<div class="genre">
+			<h4>Genres</h4>
+			<ul>
+				<% @genres.each do |g|%>
+					<li>
+						<%= g.name %>
+						<% if current_user_admin? %>
+							<%= link_to "delete", genre_path(g), class: "delete",
+													data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+							<%= link_to "edit", edit_genre_path(g) %>
+						<% end %>
+					</li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+
+
+	<% if @genre.name.present? %>
+		<%= f.label "Genre #{:name}" %>
+		<%= f.text_field :name, autofocus: true %>
+	<% else %>
+		<%= f.label "New Genre #{:name}" %>
+		<%= f.text_field :name, autofocus: true, placeholder: 'Enter New Genre'  %>
+	<% end %>
+
+	<%= f.submit %>
+<% end %>

@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_27_221948) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_28_033532) do
+  create_table "characterizations", force: :cascade do |t|
+    t.integer "movie_id", null: false
+    t.integer "genre_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["genre_id"], name: "index_characterizations_on_genre_id"
+    t.index ["movie_id"], name: "index_characterizations_on_movie_id"
+  end
+
   create_table "favorites", force: :cascade do |t|
     t.integer "movie_id", null: false
     t.integer "user_id", null: false
@@ -34,6 +43,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_27_221948) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["feature_key", "key", "value"], name: "index_flipper_gates_on_feature_key_and_key_and_value", unique: true
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "movies", force: :cascade do |t|
@@ -70,6 +85,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_27_221948) do
     t.boolean "admin", default: false
   end
 
+  add_foreign_key "characterizations", "genres"
+  add_foreign_key "characterizations", "movies"
   add_foreign_key "favorites", "movies"
   add_foreign_key "favorites", "users"
   add_foreign_key "reviews", "movies"

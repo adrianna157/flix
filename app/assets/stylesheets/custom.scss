@@ -588,3 +588,10 @@ section.errors {
     top: 0;
   }
 }
+
+// Genres
+.genre {
+  a.delete {
+    color: $red;
+  }
+}

@@ -28,5 +28,6 @@
 <% if current_user_admin? %>
   <section class="admin">
     <%= link_to "Add New Movie", new_movie_path(@movie), class: "button" %>
+    <%= link_to "Add New Genre",  new_genre_path, class: "button"%>
   </section>
 <% end %>
