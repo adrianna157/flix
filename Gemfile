@@ -17,6 +17,9 @@ end
 # Use PostgreSQL as the database for Active Record
 group :production do
   gem "pg"
+  gem 'flipper'
+  gem 'flipper-ui'
+  gem 'flipper-active_record'
 end
 
 # Use Puma as the app server [
@@ -76,9 +79,7 @@ group :development do
   # gem "spring"
 end
 
-gem 'flipper'
-gem 'flipper-ui'
-gem 'flipper-active_record'
+
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
