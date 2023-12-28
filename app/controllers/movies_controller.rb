@@ -1,12 +1,12 @@
 class MoviesController < ApplicationController
   before_action :require_signin, except: [:index, :show]
   before_action :require_admin, except: [:index, :show]
+  before_action :set_movie, only: [:show, :edit, :update, :destroy]
   def index
     @movies = Movie.send(movies_filter)
   end
 
   def show
-    @movie = Movie.find(params[:id])
     @review = @movie.reviews.new
     @fans = @movie.fans
     @fave = current_user.favorites.find_by(movie_id: @movie.id) if current_user
@@ -14,11 +14,9 @@ class MoviesController < ApplicationController
   end
 
   def edit
-    @movie = Movie.find(params[:id])
   end
 
   def update
-    @movie = Movie.find(params[:id])
     if @movie.update(movie_params)
     # redirect_to movie_path(@movie) to redirect to the show page
     redirect_to @movie, notice: "Movie successfully updated!"
@@ -43,7 +41,6 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-    @movie = Movie.find(params[:id])
     @movie.destroy
     # redirect_to movies_path to redirect to the index page (note the pluralization)
     # see other is an alias for 303
@@ -63,6 +60,10 @@ class MoviesController < ApplicationController
     else
       :released
     end
+  end
+
+  def set_movie
+    @movie = Movie.find_by!(slug: params[:id])
   end
 
 end
