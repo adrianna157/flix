@@ -17,9 +17,6 @@ end
 # Use PostgreSQL as the database for Active Record
 group :production do
   gem "pg"
-  gem 'flipper'
-  gem 'flipper-ui'
-  gem 'flipper-active_record'
 end
 
 # Use Puma as the app server [
