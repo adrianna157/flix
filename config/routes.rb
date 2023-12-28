@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   # mount Flipper::UI.app(Flipper) => '/flipper'
   root "movies#index"
 
+  get "movies/filter/:filter" => "movies#index" , as: :filtered_movies
+
   resources :movies do
     resources :reviews
     resources :favorites, only: [:create, :destroy]
