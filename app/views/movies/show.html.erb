@@ -45,7 +45,7 @@
         <% @fans.each do |fan| %>
           <li>
             <%= link_to fan.name, fan %>
-            <%= profile_image(fan, size: 35) %>
+            <%= profile_image(fan, 35) %>
           </li>
         <% end %>
       </ul>
