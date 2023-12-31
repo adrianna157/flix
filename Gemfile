@@ -19,6 +19,8 @@ group :production do
   gem "pg"
 end
 
+gem "aws-sdk-s3"
+
 # Use Puma as the app server [
 
 # Use the Puma web server [https://github.com/puma/puma]
