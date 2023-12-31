@@ -171,10 +171,12 @@ Movie.create!([
   ["Green Lantern", "green-lantern.png"],
   ["Fantastic Four", "fantastic-four.png"],
   ["Iron Man", "ironman.png"],
-  ["Super-Man", "superman.png"],
-  ["Spiderman", "spiderman.png"],
+  ["Superman", "superman.png"],
+  ["Spider-Man", "spiderman.png"],
   ["The Color Purple", "the_color_purple.png"],
-
+  ["Wonder Woman", "wonder-woman.png"],
+  ["Batman", "batman.png"],
+  ["Catwoman", "catwoman.png"],
 ].each do |movie_title, file_name|
   movie = Movie.find_by(title: movie_title)
   file = File.open(Rails.root.join("app/assets/images/#{file_name}"))

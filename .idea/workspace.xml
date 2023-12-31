@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41c2de79-f956-4e47-a109-04e82258fd04" name="Changes" comment="Refactor AWS S3 storage settings in Rails app&#10;&#10;This commit rearranges the AWS S3 storage configuration in the storage.yml file of the Rails application. It also uses Rails' built-in functionality to set the access_key_id and secret_access_key from credentials. The bucket name for storing files has been set dynamically based on the environment name.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/storage.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/storage.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +171,7 @@
       <workItem from="1698240573101" duration="649000" />
       <workItem from="1699636612093" duration="8543000" />
       <workItem from="1699712027683" duration="595000" />
-      <workItem from="1704001813962" duration="8820000" />
+      <workItem from="1704001813962" duration="9127000" />
     </task>
     <task id="LOCAL-00001" summary="Update stars business logic and view">
       <option name="closed" value="true" />
