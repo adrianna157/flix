@@ -7,7 +7,7 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @review = @movie.reviews.new
+    @review = Review.new
     @fans = @movie.fans
     @fave = current_user.favorites.find_by(movie_id: @movie.id) if current_user
     @genres = @movie.genres

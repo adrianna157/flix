@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41c2de79-f956-4e47-a109-04e82258fd04" name="Changes" comment="Refactor AWS S3 storage settings in Rails app&#10;&#10;This commit rearranges the AWS S3 storage configuration in the storage.yml file of the Rails application. It also uses Rails' built-in functionality to set the access_key_id and secret_access_key from credentials. The bucket name for storing files has been set dynamically based on the environment name.">
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+    <list default="true" id="41c2de79-f956-4e47-a109-04e82258fd04" name="Changes" comment="Update movie titles and image references in seed data&#10;&#10;This commit corrects movie titles and adjusts relevant image file references in seeds.rb file. It also adds seed data for additional movies such as Wonder Woman, Batman, and Catwoman.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +171,7 @@
       <workItem from="1698240573101" duration="649000" />
       <workItem from="1699636612093" duration="8543000" />
       <workItem from="1699712027683" duration="595000" />
-      <workItem from="1704001813962" duration="9127000" />
+      <workItem from="1704001813962" duration="10051000" />
     </task>
     <task id="LOCAL-00001" summary="Update stars business logic and view">
       <option name="closed" value="true" />
@@ -333,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704010267819</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Update movie titles and image references in seed data&#10;&#10;This commit corrects movie titles and adjusts relevant image file references in seeds.rb file. It also adds seed data for additional movies such as Wonder Woman, Batman, and Catwoman.">
+      <option name="closed" value="true" />
+      <created>1704011144000</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1704011144000</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,6 +381,7 @@
     <MESSAGE value="Modify Movie image handling and remove feature flagging &#10;&#10;This commit updates the way movie images are handled in the application and removes the 'flipper' feature flagging system. It modifies the movie model by changing the 'image_file_name' field to 'main_image', allowing image files to be attached instead of strings. All related views and forms have been updated to support this change. Additionally, the 'flipper' feature toggle system and related dependencies have been removed as they were no longer in use." />
     <MESSAGE value="Configure AWS S3 as active storage and remove unused libraries&#10;&#10;This update sets AWS S3 as the storage for production in the Rails app, effects necessary updates to the application's environment configuration and credentials files, and adds related AWS SDK gems. The update also removes no longer required references from the .idea configuration files." />
     <MESSAGE value="Refactor AWS S3 storage settings in Rails app&#10;&#10;This commit rearranges the AWS S3 storage configuration in the storage.yml file of the Rails application. It also uses Rails' built-in functionality to set the access_key_id and secret_access_key from credentials. The bucket name for storing files has been set dynamically based on the environment name." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor AWS S3 storage settings in Rails app&#10;&#10;This commit rearranges the AWS S3 storage configuration in the storage.yml file of the Rails application. It also uses Rails' built-in functionality to set the access_key_id and secret_access_key from credentials. The bucket name for storing files has been set dynamically based on the environment name." />
+    <MESSAGE value="Update movie titles and image references in seed data&#10;&#10;This commit corrects movie titles and adjusts relevant image file references in seeds.rb file. It also adds seed data for additional movies such as Wonder Woman, Batman, and Catwoman." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update movie titles and image references in seed data&#10;&#10;This commit corrects movie titles and adjusts relevant image file references in seeds.rb file. It also adds seed data for additional movies such as Wonder Woman, Batman, and Catwoman." />
   </component>
 </project>
