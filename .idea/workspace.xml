@@ -4,17 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41c2de79-f956-4e47-a109-04e82258fd04" name="Changes" comment="Add user signup and creation">
-      <change afterPath="$PROJECT_DIR$/app/controllers/concerns/test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/sessions_controller_test.rb" afterDir="false" />
+    <list default="true" id="41c2de79-f956-4e47-a109-04e82258fd04" name="Changes" comment="Remove 'flipper' feature flagging system&#10;&#10;This commit completely removes the 'flipper' feature flagging system from the project. All dependencies related to 'flipper' in Gemfile and Gemfile.lock, and all related code in views, routes and schema have been removed. The decision to remove this was based on the lack of use of feature flags in the current project.">
+      <change afterPath="$PROJECT_DIR$/db/migrate/20231231054634_remove_image_file_name_from_movies.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20231231060304_create_active_storage_tables.active_storage.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/flix.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flix.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/movies_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/movies_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/movies_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/movies_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/movie.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/movie.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/movies/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/movies/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/movies/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/movies/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/movies/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/movies/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +59,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/adriannaguevarra/Desktop/Personal Projects/rails-studio/flix/app/assets/images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -67,10 +72,13 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
       <recent name="$PROJECT_DIR$/db" />
       <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
-      <recent name="$PROJECT_DIR$/app/assets/images" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.flix">
@@ -176,6 +184,7 @@
       <workItem from="1698240573101" duration="649000" />
       <workItem from="1699636612093" duration="8543000" />
       <workItem from="1699712027683" duration="595000" />
+      <workItem from="1704001813962" duration="5944000" />
     </task>
     <task id="LOCAL-00001" summary="Update stars business logic and view">
       <option name="closed" value="true" />
@@ -209,7 +218,111 @@
       <option name="project" value="LOCAL" />
       <updated>1695691040687</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implement favorite/unfavorite feature for movies&#10;&#10;Expanded the favorites controller to handle creation and deletion of favorites. Updated the movie views to display favorite/unfavorite button based on user's previous actions. User's option to favorite or unfavorite a movie is now reflected in real-time, and the count of fans per movie is displayed.">
+      <option name="closed" value="true" />
+      <created>1703734337103</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703734337103</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add Genres functionality to Movies&#10;&#10;Implemented new feature allowing genres to be added and managed for each movie. This involved creating new Genres and Characterizations models, and updating existing Movies model and views. The addition of genres contributes to a more detailed and versatile movies framework.">
+      <option name="closed" value="true" />
+      <created>1703742554938</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1703742554938</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Improve user and movie filtering and navigation&#10;&#10;Added named scopes in User and Movie models to improve data filtering. These scopes provide better sorting and filtering options in various parts of the app such as displaying non-admin users or categorizing movies. Also, a navigation helper was implemented to provide links based on these new scopes which will enhance user interaction and experience.">
+      <option name="closed" value="true" />
+      <created>1703746251962</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1703746251962</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add slug to movies and refactor relevant code&#10;&#10;Added a new 'slug' field to the Movie model, which involved implementing a new database migration and adjusting several controllers' methods to search for movies by slug rather than id. This change will enhance the readability of movie-related URL paths across the application.">
+      <option name="closed" value="true" />
+      <created>1703748590319</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1703748590319</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Implement slug usage for User and Genre models&#10;&#10;Introduced slug concept to both User and Genre models that changes the way data is accessed from the id to the more readable slug. This involved creating database migrations to add slug fields, adjusting the controllers' methods for these models, and adding before_save callbacks to format and set slug based on existing data. The commit aims to improve URL readability and maintainability.">
+      <option name="closed" value="true" />
+      <created>1703749580601</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1703749580601</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update footer link in layout file&#10;&#10;Changed the copyright link in the footer layout from &quot;The Pragmatic Studio&quot; to personal Github page &quot;Adrianna Guevarra&quot;. This modification is intended to provide correct and updated information about the author.">
+      <option name="closed" value="true" />
+      <created>1703750628489</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1703750628489</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Update footer copyright link&#10;&#10;The copyright link in the footer layout has been updated from &quot;The Pragmatic Studio&quot; to the personal Github page &quot;Adrianna Guevarra&quot;. This change ensures that the correct and updated information about the author is displayed on the site's footer.">
+      <option name="closed" value="true" />
+      <created>1703750689346</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703750689346</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add support for PostgreSQL in production environment&#10;&#10;Updated the Gemfile to include PostgreSQL ('pg' gem) in the production environment while SQLite remains in use for development and testing. Also added corresponding x86_64-linux architecture versions of gems in the Gemfile.lock to ensure compatibility with PostgreSQL and Linux deployment.">
+      <option name="closed" value="true" />
+      <created>1703751166339</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1703751166339</updated>
+    </task>
+    <task id="LOCAL-00013" summary="The provided commit message does not match the code diffs given. Based on the code diffs,">
+      <option name="closed" value="true" />
+      <created>1703752296428</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1703752296428</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Move 'flipper' related gems to the production group&#10;&#10;The 'flipper', 'flipper-ui', and 'flipper-active_record' gems have been moved to the production group of the Gemfile. This change ensures these gems are only available in a production environment, aligning more closely with their specific usage context.">
+      <option name="closed" value="true" />
+      <created>1703752571531</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1703752571531</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Replace 'sprockets-rails' gem with 'dartsass-sprockets' and update dependencies&#10;&#10;Switched the gem 'sprockets-rails' with 'dartsass-sprockets' in the Gemfile. Also, the gems for rails, actioncable, actionmailbox, actionmailer, and several other dependencies are updated to the latest versions in Gemfile.lock. These updates are necessary for ensuring that the application benefits from the latest features, security updates, and bug fixes introduced in these new versions.">
+      <option name="closed" value="true" />
+      <created>1703753582317</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1703753582317</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Remove 'flipper' feature flagging system&#10;&#10;This commit completely removes the 'flipper' feature flagging system from the project. All dependencies related to 'flipper' in Gemfile and Gemfile.lock, and all related code in views, routes and schema have been removed. The decision to remove this was based on the lack of use of feature flags in the current project.">
+      <option name="closed" value="true" />
+      <created>1703754533432</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1703754533432</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Remove 'flipper' feature flagging system&#10;&#10;This commit completely removes the 'flipper' feature flagging system from the project. All dependencies related to 'flipper' in Gemfile and Gemfile.lock, and all related code in views, routes and schema have been removed. The decision to remove this was based on the lack of use of feature flags in the current project.">
+      <option name="closed" value="true" />
+      <created>1703755568118</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1703755568118</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +345,20 @@
     <MESSAGE value="Add gravitase usage to add profile pictures" />
     <MESSAGE value="Add edit and delete functionality to user accounts" />
     <MESSAGE value="Add user signup and creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add user signup and creation" />
+    <MESSAGE value="Implement favorite/unfavorite feature for movies&#10;&#10;Expanded the favorites controller to handle creation and deletion of favorites. Updated the movie views to display favorite/unfavorite button based on user's previous actions. User's option to favorite or unfavorite a movie is now reflected in real-time, and the count of fans per movie is displayed." />
+    <MESSAGE value="Add Genres functionality to Movies&#10;&#10;Implemented new feature allowing genres to be added and managed for each movie. This involved creating new Genres and Characterizations models, and updating existing Movies model and views. The addition of genres contributes to a more detailed and versatile movies framework." />
+    <MESSAGE value="Improve user and movie filtering and navigation&#10;&#10;Added named scopes in User and Movie models to improve data filtering. These scopes provide better sorting and filtering options in various parts of the app such as displaying non-admin users or categorizing movies. Also, a navigation helper was implemented to provide links based on these new scopes which will enhance user interaction and experience." />
+    <MESSAGE value="Add slug to movies and refactor relevant code&#10;&#10;Added a new 'slug' field to the Movie model, which involved implementing a new database migration and adjusting several controllers' methods to search for movies by slug rather than id. This change will enhance the readability of movie-related URL paths across the application." />
+    <MESSAGE value="Implement slug usage for User and Genre models&#10;&#10;Introduced slug concept to both User and Genre models that changes the way data is accessed from the id to the more readable slug. This involved creating database migrations to add slug fields, adjusting the controllers' methods for these models, and adding before_save callbacks to format and set slug based on existing data. The commit aims to improve URL readability and maintainability." />
+    <MESSAGE value="Update footer link in layout file&#10;&#10;Changed the copyright link in the footer layout from &quot;The Pragmatic Studio&quot; to personal Github page &quot;Adrianna Guevarra&quot;. This modification is intended to provide correct and updated information about the author." />
+    <MESSAGE value="Update footer copyright link&#10;&#10;The copyright link in the footer layout has been updated from &quot;The Pragmatic Studio&quot; to the personal Github page &quot;Adrianna Guevarra&quot;. This change ensures that the correct and updated information about the author is displayed on the site's footer." />
+    <MESSAGE value="Add support for PostgreSQL in production environment&#10;&#10;Updated the Gemfile to include PostgreSQL ('pg' gem) in the production environment while SQLite remains in use for development and testing. Also added corresponding x86_64-linux architecture versions of gems in the Gemfile.lock to ensure compatibility with PostgreSQL and Linux deployment." />
+    <MESSAGE value="The provided commit message does not match the code diffs given. Based on the code" />
+    <MESSAGE value="The provided commit message does not match the code diffs given. Based on the code a proper commit message could be:&#10;&#10;Remove 'test.rb' from app/controllers/concerns&#10;&#10;The 'test.rb' file under app/controllers/concerns is no longer needed and has been deleted. This removes the Report class and its related methods, cleaning up the codebase and reducing potential confusion in future development." />
+    <MESSAGE value="Move 'flipper' related gems to the production group&#10;&#10;The 'flipper', 'flipper-ui', and 'flipper-active_record' gems have been moved to the production group of the Gemfile. This change ensures these gems are only available in a production environment, aligning more closely with their specific usage context." />
+    <MESSAGE value="Remove 'flipper' related gems from general dependencies&#10;&#10;The 'flipper', 'flipper-ui', and 'flipper-active_record' gems including their dependencies are removed from the entire project's Gemfile.lock. They are shifted to the production group in the Gemfile to limit their scope to a production environment. This change better aligns with their specific use case in production." />
+    <MESSAGE value="Replace 'sprockets-rails' gem with 'dartsass-sprockets' and update dependencies&#10;&#10;Switched the gem 'sprockets-rails' with 'dartsass-sprockets' in the Gemfile. Also, the gems for rails, actioncable, actionmailbox, actionmailer, and several other dependencies are updated to the latest versions in Gemfile.lock. These updates are necessary for ensuring that the application benefits from the latest features, security updates, and bug fixes introduced in these new versions." />
+    <MESSAGE value="Remove 'flipper' feature flagging system&#10;&#10;This commit completely removes the 'flipper' feature flagging system from the project. All dependencies related to 'flipper' in Gemfile and Gemfile.lock, and all related code in views, routes and schema have been removed. The decision to remove this was based on the lack of use of feature flags in the current project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove 'flipper' feature flagging system&#10;&#10;This commit completely removes the 'flipper' feature flagging system from the project. All dependencies related to 'flipper' in Gemfile and Gemfile.lock, and all related code in views, routes and schema have been removed. The decision to remove this was based on the lack of use of feature flags in the current project." />
   </component>
 </project>
